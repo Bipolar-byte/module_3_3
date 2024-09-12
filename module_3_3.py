@@ -1,15 +1,22 @@
-def print_params(a = 1, b = 'строка', c = True):
+def print_params(a=1, b='строка', c=True):
     print(a, b, c)
-    print()
-print_params()
-print_params(b = 25)
-print_params(c = [1, 2, 3])
 
-list_ = ['STR', 5, False]
-list_1 = ['STR3', 14]
-dict_ = {'c':89}
-print_params(*list_)
-print_params(*list_1, 13)
-print_params(*list_1,**dict_)
+
+print_params()
+print_params(10)
+print_params(10, 'новая строка')
+print_params(10, 'новая строка', False)
+print_params(b=25)
+print_params(c=[1, 2, 3])
+
+
+values_list = [3.14, 'Hello', False]
+values_dict = {'a': 42, 'b': 'World', 'c': None}
+
+
+print_params(*values_list)
+print_params(**values_dict)
+
+
 values_list_2 = [54.32, 'Строка']
 print_params(*values_list_2, 42)
